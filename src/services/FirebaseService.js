@@ -1,4 +1,5 @@
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/database'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -34,8 +35,24 @@ const getPets = () => {
     })
 };
 
+const like = (petName) => {
+  database.ref('pets/' + petName + '/likes').get()
+    .then(likes=> {
+      const newLikes = likes.val() + 1
+      console.log(newLikes)
+
+      const updates = {
+        ['pets/' + petName + '/likes']: newLikes
+      }
+      
+      return database.ref().update(updates)
+    })
+    //.catch
+}
+
 const FirebaseService = {
-  getPets
+  getPets,
+  like
 };
 
 export default FirebaseService

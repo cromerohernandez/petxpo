@@ -1,6 +1,8 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 
 import FirebaseService from '../services/FirebaseService';
+
+import PetCard from './PetCard'
 
 import '../stylesheets/App.css';
 
@@ -15,12 +17,12 @@ const Home = () => {
       .catch(error => {
         console.log(error)
       })
-  }, []);
+  }, [pets]);
 
   return (
     <div className="App">
       {pets.map((pet, i) => (
-        <h2>{pet.name}</h2>
+        <PetCard pet={pet} key={i} />
       ))}
     </div>
   );
