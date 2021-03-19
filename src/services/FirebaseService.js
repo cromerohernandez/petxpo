@@ -1,18 +1,20 @@
 import firebase from 'firebase/app'
 import 'firebase/database'
+import 'firebase/storage'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: "petxpo-630a5.firebaseapp.com",
-  databaseURL: "https://petxpo-630a5-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "petxpo-630a5",
-  storageBucket: "petxpo-630a5.appspot.com",
+  authDomain: 'petxpo-630a5.firebaseapp.com',
+  databaseURL: 'https://petxpo-630a5-default-rtdb.europe-west1.firebasedatabase.app',
+  projectId: 'petxpo-630a5',
+  storageBucket: 'petxpo-630a5.appspot.com',
   messagingSenderId: process.env.REACT_APP_API_SENDER_ID,
   appId: process.env.REACT_APP_API_APP_ID,
   //measurementId: "G-JQK6VF7KXE"
 };
 
 firebase.initializeApp(firebaseConfig);
+
 const database = firebase.database();
 
 const getPets = () => {
@@ -35,14 +37,12 @@ const getPets = () => {
     })
 };
 
-const like = (petName) => {
-  database.ref('pets/' + petName + '/likes').get()
-    .then(likes=> {
+const like = (petId) => {
+  database.ref('pets/' + petId + '/likes').get()
+    .then(likes => {
       const newLikes = likes.val() + 1
-      console.log(newLikes)
-
       const updates = {
-        ['pets/' + petName + '/likes']: newLikes
+        ['pets/' + petId + '/likes']: newLikes
       }
       
       return database.ref().update(updates)
