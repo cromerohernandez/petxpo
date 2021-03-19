@@ -1,6 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/database'
-import 'firebase/storage'
+import 'firebase/auth'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -50,9 +50,26 @@ const like = (petId) => {
     //.catch
 }
 
+const signIn = (data) => {
+  const { email, password } = data
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+  .then(user => {
+    return user.user
+  })
+  .catch(error => {
+    //var errorCode = error.code;
+    //var errorMessage = error.message;
+  });
+}
+
+const signOut = () => firebase.auth().signOut()
+
 const FirebaseService = {
   getPets,
-  like
+  like,
+  signIn,
+  signOut
 };
 
 export default FirebaseService
