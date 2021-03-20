@@ -8,6 +8,8 @@ const setType = (typeArray, type) => {
   return typeArray
 }
 
-export default {
+const FiltersHelper = {
   setType
 }
+
+export default FiltersHelper

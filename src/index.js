@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 import { AuthContextProvider } from './contexts/AuthContext';
+import { FilterContextProvider } from './contexts/FilterContext';
 
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
@@ -13,7 +14,9 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthContextProvider>
-        <App />
+        <FilterContextProvider>
+          <App />
+        </FilterContextProvider>
       </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
