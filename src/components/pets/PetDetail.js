@@ -17,11 +17,11 @@ const PetDetail = () => {
       setPet(pet)
     })
     //.catch
-  }, [id, pet])
+  }, [id])
 
   useEffect(() => {
     getPet()
-  }, [])
+  }, [getPet])
 
   const handleBack = () => {
     history.push('/')

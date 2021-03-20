@@ -17,7 +17,7 @@ const LikeButton = ({ petId }) => {
     })
     //.catch
 
-  }, [petId, likes, userLike])
+  }, [petId])
   
   const getUserLike = useCallback(() => {
     FirebaseService.getUserLike(auth.currentUser, petId)
@@ -25,12 +25,12 @@ const LikeButton = ({ petId }) => {
         setUserLike(userLike)
       })
       //.catch
-  }, [userLike])
+  }, [auth.currentUser, petId])
 
   useEffect(() => {
     getLikes()
     getUserLike()
-  }, [])
+  }, [getLikes, getUserLike])
 
   const handleLike = () => {
     FirebaseService.like(userLike.id, auth.currentUser, petId)
