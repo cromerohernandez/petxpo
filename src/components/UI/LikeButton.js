@@ -1,8 +1,8 @@
 import { useContext, useState, useCallback, useEffect } from 'react'
 
-import AuthContext from '../contexts/AuthContext'
+import AuthContext from '../../contexts/AuthContext'
 
-import FirebaseService from '../services/FirebaseService'
+import FirebaseService from '../../services/FirebaseService'
 
 const LikeButton = ({ id, getLikes }) => {
   const auth = useContext(AuthContext)
