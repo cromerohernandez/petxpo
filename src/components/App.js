@@ -6,6 +6,7 @@ import AuthenticatedRoute from './auth/AuthenticatedRoute';
 import NotAuthenticatedRoute from './auth/NotAuthenticatedRoute';
 import SignIn from './auth/SingIn';
 import Home from '../components/Home';
+import PetDetail from './pets/PetDetail'
 
 import '../stylesheets/App.css';
 
@@ -20,6 +21,10 @@ function App() {
         <NotAuthenticatedRoute exact path='/signin'>
           <SignIn/>
         </NotAuthenticatedRoute>
+
+        <AuthenticatedRoute path='/pets/:id'>
+          <PetDetail/>
+        </AuthenticatedRoute>
 
         <Redirect to='/'/>
       </Switch>
