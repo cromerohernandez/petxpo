@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import { Redirect } from 'react-router-dom'
 
 import AuthContext from '../../contexts/AuthContext'
 import FirebaseService from '../../services/FirebaseService'
@@ -28,7 +27,7 @@ const SignIn = () => {
 
   const [errors, setErrors] = useState({
     email: true,
-    password: true
+    password: true,
   })
 
   const [touch, setTouch] = useState({})
@@ -65,18 +64,13 @@ const SignIn = () => {
     event.preventDefault()
 
     FirebaseService.signIn(data)
-      .then(user => {
-        console.log(user)
-        //auth.setUser(user)
+      .then(userId => {
+        auth.setUser(userId)
       })
-      /*.catch(error => {
-        setLoginError({active: true, message: error.response.data.message})
-      })*/
-  }
-
-  const handleSignOut = () => {
-    auth.logout()
-    return <Redirect to='/'/>
+      .catch(error => {
+        console.log(error.message)
+        setLoginError(true)
+      })
   }
 
   return (
@@ -118,8 +112,6 @@ const SignIn = () => {
         )}
 
         <button disabled={anyError()} type="submit">Sign in</button>
-
-        <button onClick={handleSignOut}>←</button>
 
       </form>
 

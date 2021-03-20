@@ -5,11 +5,11 @@ import FirebaseService from '../services/FirebaseService'
 const AuthContext = React.createContext()
 
 export const AuthContextProvider = (props) => {
-  const [currentUserId, setCurrentUserId] = useState(JSON.parse(localStorage.getItem('user.id')))
+  const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')))
 
-  const setUser = (userId) => {
-    localStorage.setItem('user.id', userId ? JSON.stringify(userId) : null)
-    setCurrentUserId(userId)
+  const setUser = (user) => {
+    localStorage.setItem('user', user ? JSON.stringify(user) : null)
+    setCurrentUser(user)
   }
 
   const signOut = () => {
@@ -20,7 +20,7 @@ export const AuthContextProvider = (props) => {
   }
 
   const value = {
-    currentUserId: currentUserId,
+    currentUser: currentUser,
     setUser: setUser,
     signOut: signOut
   }

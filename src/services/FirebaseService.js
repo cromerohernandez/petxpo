@@ -53,13 +53,12 @@ const like = (petId) => {
 const signIn = (data) => {
   const { email, password } = data
 
-  firebase.auth().signInWithEmailAndPassword(email, password)
+  return firebase.auth().signInWithEmailAndPassword(email, password)
   .then(user => {
-    return user.user
+    return user.user.uid
   })
   .catch(error => {
-    //var errorCode = error.code;
-    //var errorMessage = error.message;
+    throw error
   });
 }
 
