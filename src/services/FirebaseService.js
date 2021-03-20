@@ -17,6 +17,14 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
+const getPet = (petId) => {
+  return database.ref('pets/' + petId).get()
+    .then(snapshot => {
+      return snapshot.val()
+    })
+    //.catch()
+}
+
 const getPets = (typeFilter) => {
   return database.ref('pets').get()
     .then(snapshot => {
@@ -81,11 +89,11 @@ const getUserLike = (userId, petId) => {
 
 const like = (likeId, userId, petId) => {
   if (likeId) {
-    database.ref('likes').child(likeId).set(null)
+    return database.ref('likes').child(likeId).set(null)
   } else {
     let newLikeId = Date.now()
 
-    database.ref('likes').child(newLikeId).set({
+    return database.ref('likes').child(newLikeId).set({
       id: newLikeId,
       pet: petId,
       user: userId
@@ -97,17 +105,18 @@ const signIn = (data) => {
   const { email, password } = data
 
   return firebase.auth().signInWithEmailAndPassword(email, password)
-  .then(user => {
-    return user.user.uid
-  })
-  .catch(error => {
-    throw error
-  });
+    .then(user => {
+      return user.user.uid
+    })
+    .catch(error => {
+      throw error
+    });
 }
 
 const signOut = () => firebase.auth().signOut()
 
 const FirebaseService = {
+  getPet,
   getPets,
   getPetLikes,
   getUserLike,

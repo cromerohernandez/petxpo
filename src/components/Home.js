@@ -6,7 +6,7 @@ import FirebaseService from '../services/FirebaseService';
 import FiltersHelper from '../helpers/FiltersHelper'
 
 import FilterButton from './UI/FilterButton'
-import PetCard from './PetCard';
+import PetCard from './pets/PetCard';
 
 import '../stylesheets/App.css';
 
