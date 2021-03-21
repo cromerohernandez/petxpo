@@ -2,6 +2,11 @@
 
 * {
   font-family: 'Red Hat Text';
+  --COLOR_MAIN_ONE: #ff0049;
+  --COLOR_MAIN_TWO: #000000;
+  --COLOR_MAIN_THREE: #ffffff;
+  --COLOR_SEC_DARK: #ffb3c9;
+  --COLOR_SEC_LIGHT: #fff4f7;
 }
 
 .App {
