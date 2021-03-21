@@ -1,7 +1,5 @@
 import { useContext, useState, useCallback, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
 
-import AuthContext from '../contexts/AuthContext';
 import FilterContext from '../contexts/FilterContext';
 import FirebaseService from '../services/FirebaseService';
 
@@ -11,7 +9,6 @@ import PetCard from './pets/PetCard';
 import '../stylesheets/Home.css';
 
 const Home = () => {
-  const auth = useContext(AuthContext)
   const filter = useContext(FilterContext)
 
   const [pets, setPets] = useState([]);
@@ -29,13 +26,6 @@ const Home = () => {
   useEffect(() => {
     getPets()
   }, [getPets]);
-
-  const handleSignOut = () => {
-    auth.signOut()
-    return () => {
-      setPets([]) && <Redirect to='/'/>
-    }
-  }
 
   const handleType = (event) => {
     filter.handleTypeFilter(event)
