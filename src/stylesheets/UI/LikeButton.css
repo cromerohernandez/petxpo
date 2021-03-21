@@ -11,7 +11,7 @@
 }
 
 .labelLikeBtn {
-  color: #ff0049;
+  color: var(--COLOR_MAIN_ONE);
   font-size: 130%;
   font-weight: bolder;
 }

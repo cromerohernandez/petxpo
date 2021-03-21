@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { AuthContextProvider } from './contexts/AuthContext';
 import { FilterContextProvider } from './contexts/FilterContext';
 
+import Navbar from './components/UI/Navbar'
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
@@ -15,7 +16,8 @@ ReactDOM.render(
     <BrowserRouter>
       <AuthContextProvider>
         <FilterContextProvider>
-          <App />
+          <Navbar/>
+          <App/>
         </FilterContextProvider>
       </AuthContextProvider>
     </BrowserRouter>

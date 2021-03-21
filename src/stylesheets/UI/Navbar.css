@@ -1,0 +1,36 @@
+.containerNavbar {
+  height: 3rem;
+  background-color: var(--COLOR_SEC_DARK);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerLogoNavbar {
+  height: 78%;
+  margin: 11%
+}
+
+.logoNavbar {
+  height: 100%;
+}
+
+.btnNavbar {
+  height: 55%;
+  width: 30%;
+  border: none;
+  background-color: var(--COLOR_SEC_DARK);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconNavbar {
+  height: 100%;
+}
+
+.iconNavbar:hover {
+  box-shadow: 0 0 0 0.4vh var(--COLOR_MAIN_ONE);
+  border-radius: 50%;
+  padding: 0.5%
+}

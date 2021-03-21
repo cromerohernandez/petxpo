@@ -15,8 +15,13 @@ export const FilterContextProvider = (props) => {
     setTypeFilter(newTypes)
   }
 
+  const resetTypeFilter = () => {
+    setTypeFilter([...petTypes])
+  }
+
   const value = {
     petTypes: petTypes,
+    resetTypeFilter: resetTypeFilter,
     typeFilter: typeFilter,
     handleTypeFilter: handleTypeFilter
   }

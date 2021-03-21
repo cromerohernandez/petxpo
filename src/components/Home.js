@@ -44,8 +44,8 @@ const Home = () => {
 
   return (
     <div className="home">
-      <button onClick={handleSignOut}>←</button>
       <div className='containerFilterBtnsHome'>
+        <label className='labelFilterBtnsHome'>What kind of friend are you looking for?</label>
         {filter.petTypes.map((type, i) => (
           <FilterButton type={type} onClick={handleType} key={i} />
         ))}

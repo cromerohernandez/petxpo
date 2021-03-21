@@ -1,7 +1,7 @@
 .filterBtn {
   height: 5.1vh;
   width: 5.1vh;
-  margin: 1vh;
+  margin: 1vh 1.5vh;
   border: solid 2px;
   border-radius: 50%;
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 .filterBtn:hover {
-  box-shadow: 0 0 0 0.4vh #ffb3c9;
+  box-shadow: 0 0 0 0.4vh var(--COLOR_SEC_DARK);
 }
 
 .filterBtn:focus {
@@ -18,13 +18,13 @@
 }
 
 .filterBtn-on {
-  color: white;
-  background-color: #ff0049;
+  color: var(--COLOR_MAIN_THREE);
+  background-color: var(--COLOR_MAIN_ONE);
 }
 
 .filterBtn-off {
-  color: #ff0049;
-  background-color: white;
+  color: var(--COLOR_MAIN_ONE);
+  background-color: var(--COLOR_MAIN_THREE);
 }
 
 .imgFilterBtn {

@@ -1,9 +1,9 @@
 .containerPetCard {
   background-size: 11%;
   background-repeat: repeat;
-  background-color: #fff4f7;
-  width: 25%;
-  border-width: 10em;
+  background-color: var(--COLOR_SEC_LIGHT);
+  width: 23rem;
+  /*border-width: 10em;*/
   /*border-color: #ff0049;*/
   border-radius: 5%;
   margin: 1.5%;
@@ -37,7 +37,6 @@
 
 .imgPetCard {
   position: relative;
-  opacity: 0.9;
   right: 0;
   bottom: 0;
   width: 100%;
@@ -45,7 +44,8 @@
 }
 
 .imgPetCard:hover {
-  opacity: 1;
+  box-shadow: 0 0 0 0.4vh var(--COLOR_SEC_DARK);
+  transform: scale(1.01);
 }
 
 .namePetCard {
