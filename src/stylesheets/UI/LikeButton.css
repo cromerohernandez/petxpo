@@ -1,0 +1,26 @@
+.containerLikeBtn {
+  position: absolute;
+  left: 5%;
+  bottom: 1%;
+  height: 5%;
+  width: 5%;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.labelLikeBtn {
+  color: #ff0049;
+  font-size: 130%;
+  font-weight: bolder;
+}
+
+.imgLikeBtn {
+  height: 100%;
+  margin: 45%;
+}
+
+.imgLikeBtn:hover {
+  height: 120%;
+}

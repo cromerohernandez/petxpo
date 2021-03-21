@@ -8,7 +8,7 @@ import FirebaseService from '../services/FirebaseService';
 import FilterButton from './UI/FilterButton';
 import PetCard from './pets/PetCard';
 
-import '../stylesheets/App.css';
+import '../stylesheets/Home.css';
 
 const Home = () => {
   const auth = useContext(AuthContext)
@@ -43,16 +43,18 @@ const Home = () => {
   }
 
   return (
-    <div className="App">
+    <div className="home">
       <button onClick={handleSignOut}>←</button>
-      {filter.petTypes.map((type, i) => (
-        <FilterButton type={type} onClick={handleType} key={i} />
-      ))}
-
-      {pets.map((pet, i) => (
-        <PetCard pet={pet} key={i} />
-      ))}
-
+      <div className='containerFilterBtnsHome'>
+        {filter.petTypes.map((type, i) => (
+          <FilterButton type={type} onClick={handleType} key={i} />
+        ))}
+      </div>
+      <div className='petsContainerHome'>
+        {pets.map((pet, i) => (
+          <PetCard pet={pet} key={i} />
+        ))}
+      </div>
     </div>
   );
 }
