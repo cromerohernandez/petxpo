@@ -7,14 +7,20 @@
   --COLOR_MAIN_TWO: #363232;
   --COLOR_MAIN_THREE: #ffffff;
   --COLOR_SEC_DARK: #ffb3c9;
-  --COLOR_SEC_LIGHT: #fff4f7;
+  --COLOR_SEC_LIGHT: #fff4f6;
+  --COLOR_SEC_GREY: #43484d
 }
 
 .App {
   text-align: center;
+  height: 100vh - 5.6rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-logo {
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -32,4 +38,4 @@
 
 .App-link {
   color: #61dafb;
-}
+}*/

@@ -5,6 +5,8 @@ import FirebaseService from '../../services/FirebaseService'
 
 import logo from '../../assets/images/PetxpoLogo.png'
 
+import '../../stylesheets/auth/SignIn.css'
+
 // eslint-disable-next-line
 const EMAIL_PATTERN = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
@@ -76,10 +78,10 @@ const SignIn = () => {
   }
 
   return (
-    <div>
-      <img src={logo} alt='PetxpoLogo'/>
+    <div className='containerSignIn'>
+      <img src={logo} alt='PetxpoLogo' className='logoSignIn'/>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='formSignIn'>
         <input
           type='text'
           name='email'
@@ -87,9 +89,10 @@ const SignIn = () => {
           value={data.email}
           onBlur={onBlur}
           onChange={onChange}
+          className='inputSignIn'
         />
         {touch.email && errors.email && (
-          <div>
+          <div className='errorSignIn' >
             { errorMessages.email }
           </div>
         )}
@@ -100,21 +103,22 @@ const SignIn = () => {
           placeholder="password"
           value={data.password}
           onBlur={onBlur}
-          onChange={onChange}  
+          onChange={onChange}
+          className='inputSignIn'  
         />
         {touch.password && errors.password && (
-          <div>
+          <div className='errorSignIn' >
             { errorMessages.password }
           </div>
         )}
 
+        <button disabled={anyError()} type="submit" className={'btnSignIn'}>Sign in</button>
+
         {loginError && (
-          <div>
+          <div className='errorSignIn' >
             { errorMessages.login }
           </div>
         )}
-
-        <button disabled={anyError()} type="submit">Sign in</button>
 
       </form>
 
