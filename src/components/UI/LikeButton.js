@@ -4,6 +4,11 @@ import AuthContext from '../../contexts/AuthContext'
 
 import FirebaseService from '../../services/FirebaseService'
 
+import likeIconOn from '../../assets/images/likeIconOn.png'
+import likeIconOff from '../../assets/images/likeIconOff.png'
+
+import '../../stylesheets/UI/LikeButton.css'
+
 const LikeButton = ({ petId }) => {
   const auth = useContext(AuthContext)
 
@@ -42,12 +47,14 @@ const LikeButton = ({ petId }) => {
   }
   
   return (
-    <div>
-      <h6>{likes}</h6>
-      <button onClick={handleLike}>Like</button>
-      {userLike && (
-        <h6>Yes!</h6>
-      )}
+    <div className='containerLikeBtn'>
+      <label className='labelLikeBtn'>{likes}</label>
+      <img
+        src={userLike ? likeIconOn : likeIconOff}
+        alt='likeIcon'
+        className='imgLikeBtn'
+        onClick={handleLike}
+      />
     </div>
   )
 }

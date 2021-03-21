@@ -1,0 +1,61 @@
+.containerPetCard {
+  background-size: 11%;
+  background-repeat: repeat;
+  background-color: #fff4f7;
+  width: 25%;
+  border-width: 10em;
+  /*border-color: #ff0049;*/
+  border-radius: 5%;
+  margin: 1.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#containerPetCardBGbird {
+  background-image: url('../../assets/images/birdIconBG.png');
+}
+
+#containerPetCardBGcat {
+  background-image: url('../../assets/images/catIconBG.png');
+}
+
+#containerPetCardBGdog {
+  background-image: url('../../assets/images/dogIconBG.png');
+}
+
+#containerPetCardBGfish {
+  background-image: url('../../assets/images/fishIconBG.png');
+}
+
+.imgContainerPetCard {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  margin: 4%;
+}
+
+.imgPetCard {
+  position: relative;
+  opacity: 0.9;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.imgPetCard:hover {
+  opacity: 1;
+}
+
+.namePetCard {
+  margin: 2%;
+  padding: 0;
+}
+
+.latemotivPetCard {
+  font-style: italic;
+  font-weight: normal;
+  margin: 0 0 7% 0;
+  padding: 0;
+}

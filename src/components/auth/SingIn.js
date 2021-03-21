@@ -3,6 +3,8 @@ import React, { useContext, useState } from 'react'
 import AuthContext from '../../contexts/AuthContext'
 import FirebaseService from '../../services/FirebaseService'
 
+import logo from '../../assets/images/PetxpoLogo.png'
+
 // eslint-disable-next-line
 const EMAIL_PATTERN = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
@@ -75,7 +77,8 @@ const SignIn = () => {
 
   return (
     <div>
-      
+      <img src={logo} alt='PetxpoLogo'/>
+
       <form onSubmit={handleSubmit}>
         <input
           type='text'
@@ -83,7 +86,7 @@ const SignIn = () => {
           placeholder="email"
           value={data.email}
           onBlur={onBlur}
-          onChange={onChange}  
+          onChange={onChange}
         />
         {touch.email && errors.email && (
           <div>
