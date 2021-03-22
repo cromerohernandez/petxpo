@@ -1,0 +1,78 @@
+.containerSignIn {
+  width: 30rem;
+  margin-top: 10rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoSignIn {
+  width: 65%;
+  margin: 6% 0
+}
+
+.formSignIn {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputSignIn {
+  width: 80%;
+  margin: 3% 0;
+  border: 0.125rem solid var(--COLOR_SEC_DARK);
+  background-color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--COLOR_MAIN_TWO);
+  font-size: 1rem;
+  outline: none; 
+}
+
+.inputSignIn:focus {
+  background-color: var(--COLOR_SEC_LIGHT);
+  border-color: var(--COLOR_MAIN_ONE);
+}
+
+.inputSignIn::placeholder {
+  color: var(--COLOR_SEC_DARK)
+}
+
+.errorSignIn {
+  color: var(--COLOR_MAIN_ONE);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 3.5%
+}
+
+.btnSignIn {
+  margin: 8% 0;
+  padding: 1%;
+  border-color: var(--COLOR_SEC_DARK);
+  border-radius: 0.5rem;
+  color: var(--COLOR_MAIN_ONE);
+  background-color: var(--COLOR_SEC_LIGHT);
+  font-size: 1rem;
+  font-weight: 600;
+  width: 30%;
+}
+
+.btnSignIn:disabled {
+  opacity: 0.5;
+  background-color: var(--COLOR_MAIN_THREE);
+}
+
+.btnSignIn:hover:disabled {
+  opacity: 0.5;
+  color: var(--COLOR_MAIN_ONE);
+  background-color: var(--COLOR_MAIN_THREE);
+}
+
+.btnSignIn:hover {
+  color: var(--COLOR_MAIN_THREE);
+  background-color: var(--COLOR_MAIN_ONE);
+  font-weight: 600;
+}

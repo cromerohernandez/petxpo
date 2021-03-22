@@ -7,6 +7,7 @@ import { FilterContextProvider } from './contexts/FilterContext';
 
 import Navbar from './components/UI/Navbar'
 import App from './components/App';
+import Footer from './components/UI/Footer'
 import reportWebVitals from './reportWebVitals';
 
 import './stylesheets/index.css';
@@ -18,6 +19,7 @@ ReactDOM.render(
         <FilterContextProvider>
           <Navbar/>
           <App/>
+          <Footer/>
         </FilterContextProvider>
       </AuthContextProvider>
     </BrowserRouter>

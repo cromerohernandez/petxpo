@@ -1,10 +1,7 @@
 .containerLikeBtn {
-  position: absolute;
-  left: 5%;
-  bottom: 1%;
   height: 5%;
   width: 5%;
-  padding: 1em;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,15 +9,17 @@
 
 .labelLikeBtn {
   color: var(--COLOR_MAIN_ONE);
-  font-size: 130%;
+  width: 2rem;
+  font-size: 1.3rem;
   font-weight: bolder;
 }
 
 .imgLikeBtn {
-  height: 100%;
-  margin: 45%;
+  height: 1.5rem;
+  margin: 0.6rem
 }
 
 .imgLikeBtn:hover {
-  height: 120%;
+  height: 1.7rem;
+  margin: 0.5rem
 }

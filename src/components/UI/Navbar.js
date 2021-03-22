@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 
-import AuthContext from '../../contexts/AuthContext';
+import AuthContext from '../../contexts/AuthContext'
 import FilterContext from '../../contexts/FilterContext'
 
 import logo from '../../assets/images/PetxpoLogo.png'
@@ -23,9 +23,11 @@ const Navbar = () => {
             <a href="/" className='containerLogoNavbar'>
               <img src={logo} alt='PetxpoLogo' className='logoNavbar'/>
             </a>
+
             <button onClick={handleSignOut} className='btnNavbar'>
               <img src={signOutIcon} alt='SignOutIco' className='iconNavbar'/>
             </button>
+            
       </nav>
     )
   } else {

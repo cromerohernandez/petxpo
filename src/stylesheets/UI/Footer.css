@@ -1,0 +1,33 @@
+.containerFooter {
+  position: absolute;
+  bottom: 0;
+  height: 2.6rem;
+  width: 100%;
+  background-color: var(--COLOR_SEC_LIGHT);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textContainerFooter {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.textFooter {
+  opacity: 0.55;
+}
+
+.iconFooter {
+  height: 1.6rem;
+  margin: 0 0.9rem;
+  opacity: 0.4;
+}
+
+.backButtonPetDetail {
+  border-radius: 50%;
+  font-weight: bold;
+}

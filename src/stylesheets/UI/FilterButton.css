@@ -1,7 +1,7 @@
 .filterBtn {
-  height: 5.1vh;
-  width: 5.1vh;
-  margin: 1vh 1.5vh;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.59rem 0.88rem;
   border: solid 2px;
   border-radius: 50%;
   display: flex;
@@ -28,7 +28,7 @@
 }
 
 .imgFilterBtn {
-  height: 4.5vh;
-  width: 4.5vh;
+  height: 2.65rem;
+  width: 2.65rem;
   margin: 0
 }

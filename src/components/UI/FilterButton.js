@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react'
 
-import FilterContext from '../../contexts/FilterContext';
+import FilterContext from '../../contexts/FilterContext'
 
 import '../../stylesheets/UI/FilterButton.css'
 
@@ -21,12 +21,14 @@ const FilterButton = ({ type, onClick }) => {
       onClick={onClick}
       className={"filterBtn" + (filter.typeFilter.includes(type) ? " filterBtn-on" : " filterBtn-off")}
     >
+      
       <img 
         src={filter.typeFilter.includes(type) ? iconOn : iconOff}
         alt={`${type}Icon`}
         name={type}
         className="imgFilterBtn"
       />
+
     </button>
   )
 }

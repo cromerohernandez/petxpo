@@ -1,14 +1,14 @@
-import { Switch, Redirect } from 'react-router-dom';
+import React, { Switch, Redirect } from 'react-router-dom'
 
-import { WithAuthConsumer } from '../contexts/AuthContext';
+import { WithAuthConsumer } from '../contexts/AuthContext'
 
-import AuthenticatedRoute from './auth/AuthenticatedRoute';
-import NotAuthenticatedRoute from './auth/NotAuthenticatedRoute';
-import SignIn from './auth/SingIn';
-import Home from '../components/Home';
+import AuthenticatedRoute from './auth/AuthenticatedRoute'
+import NotAuthenticatedRoute from './auth/NotAuthenticatedRoute'
+import SignIn from './auth/SingIn'
+import Home from '../components/Home'
 import PetDetail from './pets/PetDetail'
 
-import '../stylesheets/App.css';
+import '../stylesheets/App.css'
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
         <Redirect to='/'/>
       </Switch>
     </div>
-  );
+  )
 }
 
-export default WithAuthConsumer(App);
+export default WithAuthConsumer(App)

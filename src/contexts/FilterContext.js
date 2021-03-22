@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import FilterHelper from '../helpers/FilterHelper';
+import FilterHelper from '../helpers/FilterHelper'
 
 const FilterContext = React.createContext()
 
