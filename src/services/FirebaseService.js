@@ -10,19 +10,20 @@ const firebaseConfig = {
   storageBucket: 'petxpo-630a5.appspot.com',
   messagingSenderId: process.env.REACT_APP_API_SENDER_ID,
   appId: process.env.REACT_APP_API_APP_ID,
-  //measurementId: "G-JQK6VF7KXE"
-};
+}
 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig)
 
-const database = firebase.database();
+const database = firebase.database()
 
 const getPet = (petId) => {
   return database.ref('pets/' + petId).get()
     .then(snapshot => {
       return snapshot.val()
     })
-    //.catch()
+    .catch(error => {
+      console.log(error.message)
+    })
 }
 
 const getPets = (typeFilter) => {
@@ -40,18 +41,18 @@ const getPets = (typeFilter) => {
 
         return pets
       } else {
-        console.log('not data available');
+        console.log('not data available')
       }
     })
     .catch(error => {
-      console.log(error);
+      console.log(error)
     })
-};
+}
 
 const getPetLikes = (petId) => {
   return database.ref('likes').get()
     .then(snapshot => {
-      let petLikes = 0;
+      let petLikes = 0
 
       Object.keys(snapshot.val()).forEach(key => {
          if (snapshot.val()[key]['pet'] === petId) {
@@ -61,7 +62,9 @@ const getPetLikes = (petId) => {
 
       return petLikes
     })
-    //.catch
+    .catch(error => {
+      console.log(error.message)
+    })
 }
 
 const getUserLike = (userId, petId) => {
@@ -84,7 +87,9 @@ const getUserLike = (userId, petId) => {
 
       return userLike ? userLike : false
     })
-    //.catch
+    .catch(error => {
+      console.log(error.message)
+    })
 }
 
 const like = (likeId, userId, petId) => {
@@ -110,7 +115,7 @@ const signIn = (data) => {
     })
     .catch(error => {
       throw error
-    });
+    })
 }
 
 const signOut = () => firebase.auth().signOut()
@@ -123,6 +128,6 @@ const FirebaseService = {
   like,
   signIn,
   signOut
-};
+}
 
 export default FirebaseService

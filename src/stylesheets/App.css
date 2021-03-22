@@ -7,7 +7,7 @@
   --COLOR_MAIN_TWO: #363232;
   --COLOR_MAIN_THREE: #ffffff;
   --COLOR_SEC_DARK: #ffb3c9;
-  --COLOR_SEC_LIGHT: #fff4f6;
+  --COLOR_SEC_LIGHT: #fff2f5;
   --COLOR_SEC_GREY: #43484d
 }
 
@@ -15,27 +15,9 @@
   text-align: center;
   height: 100vh - 5.6rem;
   width: 100vw;
+  min-height: 655px;
+  min-width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-/*.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}*/

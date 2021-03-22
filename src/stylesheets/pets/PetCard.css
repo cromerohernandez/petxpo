@@ -1,12 +1,12 @@
 .containerPetCard {
-  background-size: 11%;
+  background-size: 10%;
   background-repeat: repeat;
   background-color: var(--COLOR_SEC_LIGHT);
+  height: 28.5rem;
   width: 23rem;
-  /*border-width: 10em;*/
-  /*border-color: #ff0049;*/
   border-radius: 5%;
-  margin: 1.5%;
+  margin: 1.5% 1%;
+  padding: 0.9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,6 +35,12 @@
   margin: 4%;
 }
 
+.likeButtonPetCard {
+  position: absolute;
+  left: 0.5rem;
+  bottom: -0.7rem;
+}
+
 .imgPetCard {
   position: relative;
   right: 0;
@@ -44,18 +50,24 @@
 }
 
 .imgPetCard:hover {
-  box-shadow: 0 0 0 0.4vh var(--COLOR_SEC_DARK);
-  transform: scale(1.01);
+  box-shadow: 0 0 0 0.3vh var(--COLOR_SEC_DARK);
+  transform: scale(1.005);
 }
 
 .namePetCard {
-  margin: 2%;
+  margin: 1% 0 0 0; 
   padding: 0;
 }
 
 .latemotivPetCard {
   font-style: italic;
   font-weight: normal;
-  margin: 0 0 7% 0;
   padding: 0;
+  margin: 4% 0 0;
+}
+
+.emptyTextEmptyCard {
+  color: var(--COLOR_SEC_DARK);
+  font-weight: bold;
+  font-size: 1rem;
 }

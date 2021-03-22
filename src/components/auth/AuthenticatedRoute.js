@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { Redirect, Route } from 'react-router-dom'
 
-import AuthContext from '../../contexts/AuthContext';
+import AuthContext from '../../contexts/AuthContext'
 
 const AuthenticatedRoute = (props) => {
   const auth = useContext(AuthContext)
@@ -11,6 +11,6 @@ const AuthenticatedRoute = (props) => {
   } else {
     return <Route {...props} />
   }
-};
+}
 
-export default AuthenticatedRoute;
+export default AuthenticatedRoute

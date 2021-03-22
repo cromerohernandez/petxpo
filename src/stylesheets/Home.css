@@ -1,18 +1,19 @@
 .home {
   height: 100%;
+  width: 100%;
 }
 
 .labelFilterBtnsHome {
-  font-size: 2.2vh;
-  margin: 0 2%;
+  font-size: 1.3rem;
+  margin: 0 2% 0 0;
   font-style: italic;
   font-weight: bold;
   color: var(--COLOR_MAIN_TWO)
 }
 
 .containerFilterBtnsHome {
-  height: 6.9vh;
-  margin: 0 1vh;
+  height: 4.05rem;
+  margin: 3.5rem 0 0.5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,4 +25,53 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  border: none;
+}
+
+.buttonArrowHome {
+  background-color: var(--COLOR_MAIN_THREE);
+  border: none;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  margin: 0;
+  font-size: 3rem;
+  color: var(--COLOR_SEC_DARK);
+}
+
+.buttonArrowHome:focus {
+  outline: none
+}
+
+.buttonArrowLeftHome:hover {
+  transform: rotate(-15deg);
+  color: var(--COLOR_MAIN_ONE);
+}
+
+.buttonArrowRightHome:hover {
+  transform: rotate(15deg);
+  color: var(--COLOR_MAIN_ONE);
+}
+
+.counterHome {
+  font-size: 1rem;
+  color: var(--COLOR_SEC_DARK);
+  margin: 0 0 3% 0
+}
+
+.containerReflectionHome {
+  margin-top: 4rem;
+}
+
+.hrHome {
+  width: 15%;
+  border-top: 1px solid var(--COLOR_MAIN_TWO);
+  opacity: 0.3;
+}
+
+.reflectionHome {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--COLOR_SEC_DARK)
 }

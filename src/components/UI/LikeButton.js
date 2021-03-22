@@ -1,4 +1,4 @@
-import { useContext, useState, useCallback, useEffect } from 'react'
+import React, { useContext, useState, useCallback, useEffect } from 'react'
 
 import AuthContext from '../../contexts/AuthContext'
 
@@ -20,8 +20,9 @@ const LikeButton = ({ petId }) => {
     .then(petLikes => {
       setLikes(petLikes)
     })
-    //.catch
-
+    .catch(error => {
+      console.log(error.message)
+    })
   }, [petId])
   
   const getUserLike = useCallback(() => {
@@ -29,7 +30,9 @@ const LikeButton = ({ petId }) => {
       .then(userLike => {
         setUserLike(userLike)
       })
-      //.catch
+      .catch(error => {
+        console.log(error.message)
+      })
   }, [auth.currentUser, petId])
 
   useEffect(() => {
@@ -43,18 +46,22 @@ const LikeButton = ({ petId }) => {
         getLikes()
         getUserLike()
       })
-      //.catch()
+      .catch(error => {
+        console.log(error.message)
+      })
   }
   
   return (
     <div className='containerLikeBtn'>
       <label className='labelLikeBtn'>{likes}</label>
+
       <img
         src={userLike ? likeIconOn : likeIconOff}
         alt='likeIcon'
         className='imgLikeBtn'
         onClick={handleLike}
       />
+      
     </div>
   )
 }

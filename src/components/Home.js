@@ -1,12 +1,13 @@
-import { useContext, useState, useCallback, useEffect } from 'react';
+import React, { useContext, useState, useCallback, useEffect } from 'react'
 
-import FilterContext from '../contexts/FilterContext';
-import FirebaseService from '../services/FirebaseService';
+import FilterContext from '../contexts/FilterContext'
+import FirebaseService from '../services/FirebaseService'
 
-import FilterButton from './UI/FilterButton';
-import PetCard from './pets/PetCard';
+import FilterButton from './UI/FilterButton'
+import PetCard from './pets/PetCard'
+import EmptyCard from './pets/EmptyCard'
 
-import '../stylesheets/Home.css';
+import '../stylesheets/Home.css'
 
 const Home = () => {
   const filter = useContext(FilterContext)
@@ -30,10 +31,11 @@ const Home = () => {
 
   useEffect(() => {
     getPets()
-  }, [getPets]);
+  }, [getPets])
 
   const handleType = (event) => {
     setLoading(true)
+    setCurrentIndexPet(0)
     filter.handleTypeFilter(event)
     getPets()
   }
@@ -64,21 +66,42 @@ const Home = () => {
       </div>
 
       <div className='petsContainerHome'>
-        <button value={-1} onClick={handleChangePet}>-</button>
+        <button type='button' value={-1} onClick={handleChangePet} className='buttonArrowHome buttonArrowLeftHome'>↶</button>
+        
         {loading && (
-          <h6>loading</h6>
+          <EmptyCard/>
         )}
+
         {!currentPet && !loading && (
-          <h6>select some kind of friend</h6>
+          <EmptyCard/>
         )}
+
         {currentPet && !loading && (
           <PetCard pet={currentPet}/>
         )}
-        <button value={1} onClick={handleChangePet}>+</button>
+
+        <button type='button' value={1} onClick={handleChangePet}className='buttonArrowHome buttonArrowRightHome'>↷</button>
+
+      </div>
+
+      <div>
+        {currentPet && (
+          <h6 className='counterHome'>{(currentIndexPets + 1) + ' / ' + pets.length}</h6>
+        )}
+
+        {!currentPet && (
+          <h6 className='counterHome'>{'0 / ' + pets.length}</h6>
+        )}
+
+      </div>
+
+      <div className='containerReflectionHome'>
+        <hr className='hrHome'/>
+        <h6 className='reflectionHome'>· a good choice now for a good company for years ·</h6>
       </div>
 
     </div>
-  );
+  )
 }
 
 export default Home
