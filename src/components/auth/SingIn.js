@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 import AuthContext from '../../contexts/AuthContext'
 import FirebaseService from '../../services/FirebaseService'
 
-import logo from '../../assets/images/PetxpoLogo.png'
+import logo from '../../assets/images/petxpoLogo.png'
 
 import '../../stylesheets/auth/SignIn.css'
 

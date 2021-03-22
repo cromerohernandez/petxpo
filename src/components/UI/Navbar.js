@@ -3,8 +3,8 @@ import React, { useContext } from 'react'
 import AuthContext from '../../contexts/AuthContext'
 import FilterContext from '../../contexts/FilterContext'
 
-import logo from '../../assets/images/PetxpoLogo.png'
-import signOutIcon from '../../assets/images/SignOutIcon.png'
+import logo from '../../assets/images/petxpoLogo.png'
+import signOutIcon from '../../assets/images/signOutIcon.png'
 
 import '../../stylesheets/UI/Navbar.css'
 
