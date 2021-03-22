@@ -60,6 +60,10 @@
   width: 30%;
 }
 
+.btnSignIn:focus {
+  outline: none
+}
+
 .btnSignIn:disabled {
   opacity: 0.5;
   background-color: var(--COLOR_MAIN_THREE);

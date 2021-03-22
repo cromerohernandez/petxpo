@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import AuthContext from '../../contexts/AuthContext'
 
-import petxpoIcon from '../../assets/images/PetxpoIcon.png'
+import petxpoIcon from '../../assets/images/petxpoIcon.png'
 import clikaliaLogo from '../../assets/images/clikaliaLogo.png'
 
 import '../../stylesheets/UI/Footer.css'
