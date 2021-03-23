@@ -24,3 +24,19 @@ Por otro lado se han utilizado dos contextos, uno para la gestión de las sesion
 
 ## Documentación
 
+El proyecto trabaja sobre una base de datos que consta de 3 modelos: *user*, *pet* y *like*.
+
+Dentro de la carpeta *src* aparece la siguiente estructuración:
+
+* *assets* → incluye la carpeta *images* con todas los archivos png utilizados en las vistas de la web.
+* *components* → componentes de React estructurados de la siguiente manera:
+  ** *auth*: componentes de autenticación, para proteger las rutas de la web y para mostrar el formulario de acceso.
+  ** *pets*: componentes relacionados con la muestra de datos del modelo *pet*.
+  ** *UI*: componentes de elementos de la interfaz (navbar, botones, ...)
+  ** *App.js**: gestiona el acceso a las rutas de la web, protegidas según los critrerios de autenticación.
+  ** *Home.js*: vista principal de la web para el usuario que ha iniciado sesión.
+* *contexts*: incluye la definicición de los contextos de autenticación (usado en todas las vistas) y de filtro de búsqueda de máscotas (utilizado en la vista *Home*)
+* *helpers*: funciones de ayuda para métodos de los componentes.
+* *services*: configuración de la API (Firebase) y de las llamadas a la misma.
+* *stylesheets*: archivos css de definición de los estilos de la interfaz. Se organiza con la misma estructura de carpetas y nombres que la carpeta *components*.
+* *index.js*: archivo raíz del proyecto, donde se conecta con el *index.html* y se definen los niveles de aplicación de los proveedores de contextos sobre los componentes principales (*Navbar*, *App* y *Footer*).
