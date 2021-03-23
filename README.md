@@ -33,7 +33,7 @@ Dentro de la carpeta *src* aparece la siguiente estructuración:
   * *auth*: componentes de autenticación, para proteger las rutas de la web y para mostrar el formulario de acceso.
   * *pets*: componentes relacionados con la muestra de datos del modelo *pet*.
   * *UI*: componentes de elementos de la interfaz (navbar, botones, ...)
-  * *App.js**: gestiona el acceso a las rutas de la web, protegidas según los critrerios de autenticación.
+  * *App.js*: gestiona el acceso a las rutas de la web, protegidas según los critrerios de autenticación.
   * *Home.js*: vista principal de la web para el usuario que ha iniciado sesión.
 * *contexts*: incluye la definicición de los contextos de autenticación (usado en todas las vistas) y de filtro de búsqueda de máscotas (utilizado en la vista *Home*)
 * *helpers*: funciones de ayuda para métodos de los componentes.
